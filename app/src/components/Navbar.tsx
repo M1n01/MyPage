@@ -27,7 +27,9 @@ const Navbar: FC = () => {
             variant="subtle"
             leftSection={<IconBrandGithub size={20} />}
             component="a"
-            href="https://github.com/yourusername"
+            href="https://github.com/M1n01"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub
           </Button>
@@ -35,7 +37,9 @@ const Navbar: FC = () => {
             variant="subtle"
             leftSection={<IconBrandX size={20} />}
             component="a"
-            href="https://twitter.com/yourusername"
+            href="https://twitter.com/m1nabe"
+            target="_blank"
+            rel="noopener noreferrer"
           >
                 X
           </Button>
@@ -47,6 +51,7 @@ const Navbar: FC = () => {
             leftSection={<IconHeart size={20} />}
             justify='center'
             onClick={() => window.open('your-donation-link', '_blank')} // Add your donation link
+            disabled
           >
             Support My Work
           </Button>
