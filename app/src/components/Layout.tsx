@@ -17,7 +17,7 @@ const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
       padding="md"
     >
       <Header opened={opened} toggle={toggle} />
-      <Navbar />
+      <Navbar opened={opened} toggle={toggle} />
       <AppShell.Main>{children}</AppShell.Main>
       <Footer />
     </AppShell>
