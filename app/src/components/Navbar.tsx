@@ -2,9 +2,8 @@ import { FC, useState } from 'react';
 import { AppShell, Stack, useMantineTheme, Avatar, Title, Text, Group, Button } from '@mantine/core';
 import { IconBrandGithub, IconBrandX, IconHeart } from '@tabler/icons-react';
 
-const Navbar: FC = () => {
+const Navbar: FC<{ opened: boolean; toggle: () => void }> = ({ opened, toggle }) => {
   const theme = useMantineTheme();
-  const [opened, setOpened] = useState(false);
 
   return (
     <AppShell.Navbar p="md" hidden={!opened}>
