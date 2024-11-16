@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react';
-import { Container, Title, Card, Text, Grid, Skeleton, Badge, Group, Stack, Pagination, GridCol } from '@mantine/core';
+import { Container, Title, Card, Text, Grid, Skeleton, Badge, Group, Pagination, GridCol } from '@mantine/core';
 
 import Layout from '../components/Layout';
-import { type BlogProps, getPosts, getPostBySlug } from '../api/Notion';
+import { type BlogProps, getPosts } from '../api/notion';
 
 const BlogList: FC = () => {
   const [posts, setPosts] = useState<BlogProps[]>([]);
@@ -53,6 +53,16 @@ const BlogList: FC = () => {
             ))
           )}
         </Grid>
+
+        {!loading && Math.ceil(posts.length / postsPerPage) > 1 && (
+        <Group justify="center" mt="xl">
+          <Pagination
+            value={activePage}
+            onChange={setActivePage}
+            total={Math.ceil(posts.length / postsPerPage)}
+          />
+        </Group>
+      )}
       </Container>
     </Layout>
   );
