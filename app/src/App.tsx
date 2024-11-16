@@ -5,6 +5,7 @@ import './App.css';
 
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 const App: FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>
     </MantineProvider>
