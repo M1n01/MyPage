@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { AppShell, Autocomplete, Burger, Container, Group, Title } from '@mantine/core';
+import { AppShell, Burger, Container, Group, Title } from '@mantine/core';
 import classes from './Header.module.css';
 
 const links = [

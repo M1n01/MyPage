@@ -1,9 +1,8 @@
-import { FC, useState } from 'react';
-import { AppShell, Stack, useMantineTheme, Avatar, Title, Text, Group, Button } from '@mantine/core';
+import { FC } from 'react';
+import { AppShell, Stack, Avatar, Title, Text, Group, Button } from '@mantine/core';
 import { IconBrandGithub, IconBrandX, IconHeart } from '@tabler/icons-react';
 
 const Navbar: FC<{ opened: boolean; toggle: () => void }> = ({ opened, toggle }) => {
-  const theme = useMantineTheme();
 
   return (
     <AppShell.Navbar p="md" hidden={!opened}>
