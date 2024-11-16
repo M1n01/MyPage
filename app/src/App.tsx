@@ -1,12 +1,10 @@
 import { FC } from 'react';
 import { MantineProvider } from '@mantine/core';
-// import { Notifications } from '@mantine/notifications';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home';
-import Login from './pages/Login';
-// import Settings from './pages/Settings';
+import Blog from './pages/Blog';
 
 const App: FC = () => {
   return (
@@ -14,8 +12,7 @@ const App: FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/settings" />
-          <Route path="/login" element={<Login />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </BrowserRouter>
     </MantineProvider>
